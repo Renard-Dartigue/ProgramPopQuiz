@@ -8,13 +8,16 @@
     padding: 0;
 }
 
-
+/* ================================HEADER================================================================================================ */
 header {
     background-color: aliceblue;
     border-bottom: 40px #879274;
 
 }
 
+
+
+/* ================================BODY================================================================================================= */
 body {
     font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';;
@@ -23,30 +26,19 @@ body {
     background: linear-gradient(0deg, rgb(4, 48, 48) 0%, rgb(13, 255, 182) 63%);
 }
 
-/* main{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    justify-content: center;
-} */
-
-
-/* figure{
-    display: block;
-} */
-
 h1{
     background-size: auto;
     margin-bottom: 2%;
     font-size: 4rem;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 h2{
     display:flex;
     flex-wrap: wrap;
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 .container {
@@ -58,6 +50,8 @@ h2{
     max-width: 80rem;
     margin: 0 auto;
     padding: 2rem;
+    /* background-color: #879274;
+    background-size: auto; */
 }
 
 .flex-column {
@@ -82,6 +76,8 @@ h2{
     display: none;
 }
 
+/* ====================================BUTTON====================================================================================== */
+
 .button {
     font-size: 1.5rem;
     padding: 0rem 0;
@@ -92,4 +88,22 @@ h2{
     text-decoration: none;
     color:#879274;
     background-color: aliceblue;
+    border-radius: 4px;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgb(4, 48, 48);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.button[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#highscore-button {
+    background: rgb(255, 253, 141);
 }
