@@ -67,7 +67,7 @@ h3{
     padding: 50px;
 }
 
-.flex-column {
+/* .flex-column {
     display: flex;
     flex-direction: column;
 }
@@ -87,7 +87,7 @@ h3{
 
 .hidden {
     display: none;
-}
+} */
 
 /* ====================================BUTTONS====================================================================================== */
 
@@ -143,4 +143,14 @@ h3{
     cursor: pointer;
     background-color: aliceblue;
     color: rgb(0, 98, 211);
+}
+
+/* ====================SCRIPT======================================== */
+
+.correct{
+    background: rgb(90, 255, 112);
+}
+
+.incorrect{
+    background: rgb(255, 73, 73)
 }
