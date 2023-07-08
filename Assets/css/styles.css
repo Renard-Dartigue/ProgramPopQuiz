@@ -107,7 +107,9 @@ h3{
     transition-duration: 0.3s;
 }
 
-.btn:hover {
+
+/* the hover effect will work if the button is NOT disabled */
+.btn:hover:not([disabled]) {
     cursor: pointer;
     background-color: rgb(52, 147, 255) ;
     color: azure;

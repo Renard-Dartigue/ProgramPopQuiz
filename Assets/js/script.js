@@ -98,9 +98,48 @@ function selectAnswer(e){
     const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect){
         selectedBtn.classList.add("correct");
+        score++;
     } else{
         selectedBtn.classList.add("incorrect");
     }
+//button will be disabled once the user selects an answer button then
+//display the next button.
+    Array.from(answerButtons.children).forEach(button =>{
+        if(button.dataset.correct === "true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display = "block";
 }
+
+
+//displays exact score to user before asking if they want to play again.
+// (``) allows functions in strings to exicute. 
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextButton.innerHTML = "Play Again?"
+    nextButton.style.display = "block"
+}
+
+//loop shows score if no more questions are left.
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }else{
+        showScore();
+    }
+}
+
+//loop to restart the quiz
+nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    }else{
+        startQuiz();
+    }
+});
 
 startQuiz();
